@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 80px 1fr;
-    background-image: url("picture-vegetables-fruits-with-blue-background.jpg");
+    background-image: url("login/images/picture-vegetables-fruits-with-blue-background.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
