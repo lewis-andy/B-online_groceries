@@ -1,7 +1,14 @@
+main{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
 .product {
     text-align: center;
     margin: 20px;
-    background-color: #fff;
+    background-color: #2b6841;
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
@@ -39,7 +46,7 @@ footer {
     text-align: center;
     margin-top: 20px;
     padding: 10px 0;
-    background-color: #333;
+    background-color: #33b01d;
     color: #fff;
 }
 
@@ -49,64 +56,94 @@ footer {
     box-sizing: border-box;
     
     }
-    /* consists of the webs whole body and the background image*/
-    body{
-    
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 80px 1fr;
-    background-image: url("login/images/picture-vegetables-fruits-with-blue-background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    height:100vh;
-    }
-    /* it is the navigation bar to this web*/
-    navbar{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: 80px;
-    align-items: center;
-    border-bottom: 2px solid rgb(40, 39, 39); 
-    box-shadow: 4px 5px 10px rgb(22, 22, 23);
-    }
-    
-    .logo{
-    
-    grid-column: 1/2;
-    grid-row: 1/2;
+    *{
+        padding: 0; 
+        margin: 0;
+        box-sizing: border-box;
+        
+        }
+        /* consists of the webs whole body and the background image*/
+        body{
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1fr;
+        background-image:url("");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        height:100vh;
+        }
+        /* it is the navigation bar to this web*/
+        navbar{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 80px;
+        align-items: center;
+        border-bottom: 2px solid rgb(40, 39, 39); 
+        box-shadow: 4px 5px 10px rgb(22, 22, 23);
+        }
+        
+        .logo{
+        
+        grid-column: 1/2;
+        grid-row: 1/2;
+        text-align: center;
+        }
+        .logo h1{
+        
+        color: rgb(109, 212, 231);
+        }
+        .logo span{
+        color: darkorange;
+        }
+        .navlist{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: flex-end;
+        
+        }
+        .list-item{
+        margin-right: 200px;
+        
+        }
+        
+        .list-item li{
+        display: inline-block;
+        margin-right: 60px;
+        
+        }
+        
+        li a{
+        text-decoration: none;
+        color: whitesmoke; 
+        }
+        /*moving text welcome to barasa's online store*/
+.moving-text {
+    width: 100%;
     text-align: center;
+    overflow: hidden;
+}
+
+.moving-text p {
+    white-space: nowrap;
+    animation: moveText 10s linear infinite;
+}
+.moving-text p{
+    background-color: rgb(34, 164, 5);
+    color: rgb(225,253,208);
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(0);
     }
-    .logo h1{
-    
-    color: rgb(109, 212, 231);
+    100% {
+        transform: translateX(100%);
     }
-    .logo span{
-    color: darkorange;
-    }
-    .navlist{
-    grid-column: 2/3;
-    grid-row: 1/2;
-    display: flex;
-    justify-content: flex-end;
-    
-    }
-    .list-item{
-    margin-right: 200px;
-    
-    }
-    
-    .list-item li{
-    display: inline-block;
-    margin-right: 60px;
-    
-    }
-    
-    li a{
-    text-decoration: none;
-    color: whitesmoke; 
-    }
+}
