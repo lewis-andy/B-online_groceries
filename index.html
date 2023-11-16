@@ -15,7 +15,7 @@
 </div>
 <div class="navlist">
 <ul class="list-item">
-<li><a href="#">Home</a></li> <li><a href="About.html">About</a></li> <li><a href="#">Contact</a></li> <li><a href="#">SignIn</a></li>
+<li><a href="#">Home</a></li> <li><a href="../B-online_groceries/login/about.html">About</a></li> <li><a href="#">Contact</a></li> <li><a href="#">SignIn</a></li>
 </ul>
 
 </div>
@@ -25,7 +25,7 @@
  <content>
  <div class="mainContent">
  <div class="textContent">
- <h1><span>A</span>t barasa's Grocery ,<span> W</span>e offer quality and fresh<span> P</span>roducts for our clients</h1>
+ <br><h1><span>A</span>t barasa's Grocery ,<span> W</span>e offer quality and fresh<span> P</span>roducts for our clients</h1>
  <p>To explore our products,and know about us click here </p>
  <a href="Explore.html">
     <button id="followBtn"><i class="fa-brands fa-tiktok" style="color: #0b1423;"></i> explore!</button>
@@ -34,30 +34,39 @@
  </div>
 
 
-
-<form action="#" class="signin-form" id="loginForm">
-    <div class="form-group">
-        <input type="text" id="username" class="form-control" placeholder="Username" required>
+ <form id="loginForm">
+    <div class="loginForm">
+    <div class="login">
+    <h1>Login</h1>
     </div>
-<div class="form-group">
-<input id="password-field" type="password" class="form-control" placeholder="Password" required>
-<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+    
+    <div class="inputForm">
+       <div class="listForm">
+         <div class="username">
+           <label for="user">Username</label><br>
+           <div class="userForm">
+             <i class="fa-solid fa-user" style="color: #222d3f;"></i>
+             <input type="text" name="" id="user">
+           </div>
+         </div>
+   
+         <div class="password">
+           <label for="pass">Password</label><br>
+           <div class="passForm">
+             <i class="fa-solid fa-lock" style="color: #222d3f;"></i>
+             <input type="password" name="" id="pass">
+           </div>
+         </div>
+       </div>
+     </div>
+  <center><div class="buttonForm">
+    <button type="submit">Login</button>
+  </div></center>
 </div>
-<div class="form-group">
-  <button type="submit" class="form-control btn btn-primary submit px-3" >Sign In</button>
-</div>
-<div class="form-group d-md-flex">
-  <div class="w-50">
-      <label class="checkbox-wrap checkbox-primary">Remember Me
-                    <input type="checkbox" checked>
-                    <span class="checkmark"></span>
-                  </label>
-              </div>
-              <div class="w-50 text-md-right">
-                  <a href="#" style="color: #fff">Forgot Password</a>
-              </div>
-</div>
+
+
 </form>
+
 
 
 <script src="login/script.js"></script>

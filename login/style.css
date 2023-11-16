@@ -17,6 +17,7 @@
     background-repeat: no-repeat;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     height:100vh;
+
     }
     /* it is the navigation bar to this web*/
     navbar{
@@ -28,6 +29,7 @@
     align-items: center;
     border-bottom: 2px solid rgb(40, 39, 39); 
     box-shadow: 4px 5px 10px rgb(22, 22, 23);
+    
     }
     
     .logo{
@@ -84,7 +86,7 @@
     .textContent{
     display: flex;
     flex-direction: column;
-    width: 700px;
+    width: 500px;
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -93,7 +95,7 @@
     }
     
     .textContent h1{
-    color: rgb(81, 81, 205);
+    color: rgb(238, 238, 241);
     }
     .textContent span{
     color:rgb(60, 219, 68);
@@ -123,9 +125,9 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 120px 200px 50px 1fr;
-    width: 400px; height: 500px;
+    width: 400px; height: 450px;
     border-radius: 20px;
-    background-color:rgba(242, 132, 14, 0.894);
+    background-color:rgba(91, 157, 158, 0.894);
     backdrop-filter: blur(4px);
     }
     
@@ -206,7 +208,7 @@
      }
     /*login button*/
     
-    #loginutton{
+    .buttonForm{
     height: 35px; border: none;
     outline: none;
     background-color: rgb(65, 124, 234);

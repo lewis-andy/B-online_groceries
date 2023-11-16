@@ -8,7 +8,7 @@ main{
 .product {
     text-align: center;
     margin: 20px;
-    background-color: #2b6841;
+    background-color: #b8e6c9;
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
@@ -77,7 +77,10 @@ footer {
         height:100vh;
         }
         /* it is the navigation bar to this web*/
-        navbar{
+navbar.transition{
+    transition: all 0.3s ease-in-out;
+}
+        .navbar{
         grid-column: 1/2;
         grid-row: 1/2;
         display: grid;
@@ -86,8 +89,12 @@ footer {
         align-items: center;
         border-bottom: 2px solid rgb(40, 39, 39); 
         box-shadow: 4px 5px 10px rgb(22, 22, 23);
-        }
-        
+        position:fixed;  
+        top:0;
+        z-index: 1000; 
+        padding: 10px;
+    }
+      
         .logo{
         
         grid-column: 1/2;
@@ -135,7 +142,7 @@ footer {
     animation: moveText 10s linear infinite;
 }
 .moving-text p{
-    background-color: rgb(34, 164, 5);
+    background-color: rgb(78, 129, 66);
     color: rgb(225,253,208);
 }
 
