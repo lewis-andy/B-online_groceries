@@ -8,7 +8,7 @@ main{
 .product {
     text-align: center;
     margin: 20px;
-    background-color: #b8e6c9;
+    background-color: #e6f2ea;
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
@@ -46,7 +46,7 @@ footer {
     text-align: center;
     margin-top: 20px;
     padding: 10px 0;
-    background-color: #33b01d;
+    background-color: #eaeee9;
     color: #fff;
 }
 
@@ -130,7 +130,7 @@ navbar.transition{
         text-decoration: none;
         color: whitesmoke; 
         }
-        /*moving text welcome to barasa's online store*/
+        /*moving text welcome to barasa's online store*
 .moving-text {
     width: 100%;
     text-align: center;
@@ -153,4 +153,147 @@ navbar.transition{
     100% {
         transform: translateX(100%);
     }
+}*/
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#results {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#results li {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#results li:last-child {
+    border-bottom: none;
+}
+/* the product hover*/
+
+.card{
+    position:relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+justify-content: center;
+align-items: center;
+transition: 0.5s;
+border-radius: 20px;
+transition-delay: 0.5s;
+}
+.card:hover{
+    width: 600px;
+    transition-delay: 0.5s;
+
+}
+.card .circle{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .circle::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 350px;
+    height: 350px;
+    border-radius: 50px;
+    background: rgb(86, 125, 98)5, 67, 67);
+    border: 8px solid var(--clr);
+    filter:drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
+    transition: 0.5s, background 0.5s;
+    transition-delay: 0.75s, 15s;
+}
+.card:hover .circle::before{
+    transition-delay: 0.5s;
+    border-radius: 20px;
+    height: 100px;
+    width:100px;
+    background: var(--clr);
+
+}
+.card .circle .logo{
+    position: relative;
+    width:250px;
+    transition:0.5s;
+    transition-delay: 0.5s;
+
+}
+.card:hover .circle.logo{
+    transform: scale(0);
+    transition-delay: 0s;
+
+}
+.card .product_img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0) rotate(315deg);
+height: 300px;
+transition: 0.5s ease-in-out;
+
+}
+.card:hover .product_img{
+    transition-delay: 0.75s;
+top: 25%;
+left:72%;
+transform: translate(-50%, -50%) scale(1) rotate(15deg);
+}
+.card .content{
+    position: absolute;
+    width: 50%;
+    left:20%;
+    padding: 20px 20px 20px 40 px;
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+
+}
+.card:hover .content{
+    transition-delay: 0.75s;
+    opacity:1;
+    visibility: visible;
+    left: 20px;
+    
+}
+.card .content h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.0cm;
+    line-height: 0.5cm;
+
+}
+.card .content p{
+    color: white;
+
+}
+.card .content a{
+    position: relative;
+    color: rgb(51, 74, 57);
+    background: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
 }
