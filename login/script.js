@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	  if (username === "user" && password === "12345@") {
 		window.location.href = "user-interface/home.html"; // Redirect to home.html for user
 	  } else if (username === "admin" && password === "12345@") {
-		window.location.href = "admin-panel/admin.html"; // Redirect to admin.html for admin
+		window.location.href = "admin-panel/index.html"; // Redirect to admin.html for admin
 	  } else {
 		alert("Invalid username or password. Please try again."); // Show an error message for incorrect credentials
 	  }
