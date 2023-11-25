@@ -41,15 +41,6 @@ main{
     font-size: 16px;
     margin: 10px 0;
 }
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px 0;
-    background-color: #eaeee9;
-    color: #fff;
-}
-
 *{
     padding: 0; 
     margin: 0;
@@ -130,30 +121,17 @@ navbar.transition{
         text-decoration: none;
         color: whitesmoke; 
         }
-        /*moving text welcome to barasa's online store*
-.moving-text {
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
-}
-
-.moving-text p {
-    white-space: nowrap;
-    animation: moveText 10s linear infinite;
-}
-.moving-text p{
-    background-color: rgb(78, 129, 66);
-    color: rgb(225,253,208);
-}
-
-@keyframes moveText {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}*/
+        @media (max-width: 600px) {
+            ul {
+                flex-direction: column; /* Stack items vertically */
+            }
+    
+            li {
+                margin: 0; /* Remove right margin for stacked items */
+                margin-bottom: 10px; /* Add bottom margin for spacing */
+            }
+        }
+        
 .container {
     max-width: 600px;
     margin: 50px auto;
@@ -180,120 +158,235 @@ navbar.transition{
 #results li:last-child {
     border-bottom: none;
 }
-/* the product hover*/
-
-.card{
+/* search icon*/
+.search{
     position:relative;
-    width: 350px;
-    height: 350px;
-    display: flex;
-justify-content: center;
-align-items: center;
-transition: 0.5s;
-border-radius: 20px;
-transition-delay: 0.5s;
+    width: 400px;
+    margin: 0 auto;
 }
-.card:hover{
-    width: 600px;
-    transition-delay: 0.5s;
-
+.search label{
+    position: relative;
+    width: 100%;
 }
-.card .circle{
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 2px solid var(--black2);
+    background-color: black; /* Set the background color to black */
+    color: white; /* Set the text color to white */
+}
+.search label ion-icon{
     position: absolute;
     top: 0;
-    left:0;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 10px;
+    font-size: 1.2rem;
 }
-.card .circle::before{
-    content: '';
-    position: absolute;
-    top:0;
-    left:0;
-    width: 350px;
-    height: 350px;
-    border-radius: 50px;
-    background: rgb(86, 125, 98)5, 67, 67);
-    border: 8px solid var(--clr);
-    filter:drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
-    transition: 0.5s, background 0.5s;
-    transition-delay: 0.75s, 15s;
-}
-.card:hover .circle::before{
-    transition-delay: 0.5s;
-    border-radius: 20px;
-    height: 100px;
-    width:100px;
-    background: var(--clr);
-
-}
-.card .circle .logo{
-    position: relative;
-    width:250px;
-    transition:0.5s;
-    transition-delay: 0.5s;
-
-}
-.card:hover .circle.logo{
-    transform: scale(0);
-    transition-delay: 0s;
-
-}
-.card .product_img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0) rotate(315deg);
-height: 300px;
-transition: 0.5s ease-in-out;
-
-}
-.card:hover .product_img{
-    transition-delay: 0.75s;
-top: 25%;
-left:72%;
-transform: translate(-50%, -50%) scale(1) rotate(15deg);
-}
-.card .content{
-    position: absolute;
-    width: 50%;
-    left:20%;
-    padding: 20px 20px 20px 40 px;
-    opacity: 0;
-    transition: 0.5s;
-    visibility: hidden;
-
-}
-.card:hover .content{
-    transition-delay: 0.75s;
-    opacity:1;
-    visibility: visible;
-    left: 20px;
+/* the image*/
+body {
+    font-family: sans-serif;
+  }
+  
+  header {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav {
+    float: right;
+  }
+  
+  nav a {
+    margin-right: 10px;
+    color: #000;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  
+  
+  .hero-text {
+    position: absolute; /* Set position to absolute to allow layering with the image */
+    top: 40%; /* Set top position to 50% to vertically center the text in the container */
+    left: 50%; /* Set left position to 50% to horizontally center the text in the container */
+    transform: translate(-50%, -50%); /* Offset the text to account for centering */
+    width: 100%; /* Set width to 50% to allow the text to occupy half of the container horizontally */
+    background-color: rgba(18, 17, 17, 0.5); /* Set a semi-transparent background for the text box */
+    padding: 20px;
+    color: white; /* Set text color to white */
+  }
+  
+  .hero-text h2 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  /*shop by category*/
+  .feature {
+    text-align: center;
+    margin: 20px;
+    background-color: #fafafa;
+    border: 1px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    max-width: 300px;
     
 }
-.card .content h2{
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.0cm;
-    line-height: 0.5cm;
-
-}
-.card .content p{
-    color: white;
-
-}
-.card .content a{
-    position: relative;
-    color: rgb(51, 74, 57);
-    background: white;
-    padding: 10px 20px;
+.feature img {
+    max-width: 100%;
+    border: 2px solid #fffffc;
     border-radius: 10px;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 10px;
+    transition: transform 0.2s;
 }
+
+.feature img:hover {
+    transform: scale(1.05);
+}
+
+.feature h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.feature p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+  /* structred*/
+  .background-container {
+    background-image: url("../../../login/images/picture-vegetables-fruits-with-blue-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 100vw;
+    grid-row: 1 / span 2;
+  }
+  .background-text {
+    position: absolute;
+    top: 30%;
+    right: 20px; /* Adjust as needed */
+    transform: translateY(-50%);
+    color: goldenrod;
+    font-size: 30px;
+    text-align: right;
+    font-weight: 1000;
+    z-index: 100;
+  }
+  
+  .bottom-container {
+    background-color: #060606;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+  }
+  
+  .column {
+    width: 20%;
+  }
+  
+  .column h3 {
+    color: rgb(109, 212, 231); /* Gold color for heading */
+  }
+  
+  /* Style the input and button as needed */
+  input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .subscribe-button {
+    /* Your styles for the button */
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Padding around the text */
+    font-size: 16px; /* Font size of the text */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Add some border radius for rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+  .subscribe-button:hover {
+    background-color: #45a049; /* Darker green color on hover */
+  }
+  /* Shop in category*/
+  
+  .category-container {
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .scrollable-container {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+  
+  .small-container {
+    flex: 0 0 33.33%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-color: greenyellow;
+    text-align: left;
+  }
+  
+  .small-container img {
+    width: 100%;
+    max-height: 200px; /* Adjust as needed */
+    object-fit: cover;
+  }
+  
+  .scroll-btn {
+    background-color: #ffd700; /* Gold color for the button */
+    border: none;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  /* container heading bootom*/
+  .container-heading {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.container-heading h2 {
+    font-size: 24px; /* Adjust as needed */
+    font-weight: bold;
+}
+
+.heading-line {
+    width: 50px; /* Adjust as needed */
+    border: 2px solid #000; /* Change color as needed */
+    margin: 10px auto; /* Adjust as needed */
+}
+/* css for the icons*/
+.social-container {
+    display: flex;
+    gap: 20px; /* Adjust the spacing between icons */
+  }
+  
+  .social-icon {
+    display: inline-block;
+    font-size: 24px; /* Adjust the font size of the icons */
+    text-decoration: none;
+    color: #333; /* Adjust the color of the icons */
+  }
+  

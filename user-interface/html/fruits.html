@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <link rel="icon" href="../assets/images/logo.png" type="image/gif" />
     <title>Fruits</title>
     <link rel="stylesheet" href="../../login/style.css">
+    <link rel="stylesheet" href="../assets/css/cart.css">
     <link rel="stylesheet" href="../../user-interface/assets/css/vegetables.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <script src="../assets/js/fruits.js"></script>
     
 </head>
 <body>
@@ -15,20 +22,31 @@
         </div>
         <div class="navlist">
         <ul class="list-item">
-        <li><a href="../../user-interface/html/vegetables.html">vegetables</a></li> <li><a href="../html/fruits.html">fruits</a></li> <li>
-            <a href="../html/cereals.html">cereals</a></li> <li><a href="../../index.html">Signout</a></li>
-        <li><a href="../html/condiments.html">condiments</a></li><li><a href="../user-interface/html/dairy.html">Dairy</a></li>
+            <li><a href="../home.html">Home</a></li>
+        <li><a href="../../user-interface/html/vegetables.html">vegetables</a></li> 
+        <li><a href="../html/fruits.html">fruits</a></li> <li>
+            <a href="../html/cereals.html">cereals</a></li>
+             <li><a href="../html/condiments.html">condiments</a></li>
+        <li><a href="../user-interface/html/dairy.html">Dairy</a></li>
+        <li><a href="../../index.html">Signout</a></li>
+        <li>
+        </li>
         </ul>
-        
         </div>
-
          </navbar>
+         <div id="cart-icon">&#128722;</div>
+
+         <div id="cart-container">
+           <h3>Your Cart</h3>
+           <div id="cart-items"></div>
+         </div>
          <main>
             <section class="product">
                 <img src="../assets/images/apple.jpg" alt="Apple">
                 <h2>Apple</h2>
                 <p>Ksh. 250 per kg</p>
-                <button class="addToCartButton">Add to Cart</button>
+                <button onclick="addToCart({ id: 1, name: 'Product 1', price: 10.99 })">Add to Cart</button>
+
             </section>
 
             <section class="product">
@@ -92,8 +110,61 @@
                     <p>Ksh. 250 per kg</p>
                     <button class="addToCartButton">Add to Cart</button>
                 </section>
+                <section class="product">
+                    <img src="../assets/images/Melon.jpeg" alt="watermelon">
+                    <h2>Melon</h2>
+                    <p>Ksh. 250 per kg</p>
+                    <button class="addToCartButton">Add to Cart</button>
+                </section>
+                <section class="product">
+                    <img src="../assets/images/grape.jpeg" alt="watermelon">
+                    <h2>Grape</h2>
+                    <p>Ksh. 250 per kg</p>
+                    <button class="addToCartButton">Add to Cart</button>
+                </section>
             </main>
-
-
+             <!-- Bottom Container -->
+    <h2>barasa's G rocery</h2>
+    <div class="bottom-container">
+        
+        <!-- Columns for bottom container -->
+       
+        <div class="column">
+            <h3>Barasa's Grocery</h3>
+            <p>Follow us on all social media platforms to be well informed of our new offers and exciting deals.</p>
+            <div class="social-container">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook" style="color: #3b5998;"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram" style="color: #e4405f;"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter" style="color: #1da1f2;"></i></a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon"><i class="fab fa-tiktok" style="color: #c03c3c;"></i></a>
+                
+            </div>
+        </div>
+        <div class="column">
+            <h3>Contact Info</h3>
+            <p>+123-456-7890</p>
+            <p>+111-222-3333</p>
+            <p>barasasgrocery@gmail.com</p>
+        </div>
+        <div class="column">
+            <h3>Quick Links</h3>
+            <p>→ Home</p>
+            <p>→ Fruits</p>
+            <p>→ Vegetables</p>
+            <p>→ Cereals</p>
+            <p>→ Condiments</p>
+            <p>→ About us</p>
+            <p>→ Logout</p>
+        </div>
+        <div class="column">
+            <h3>Newsletter</h3>
+            <p>Subscribe For the Latest Updates</p>
+            <form action="{{ url_for('subscribe') }}" method="post">
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+                <button type="submit" class="subscribe-button">Subscribe</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

@@ -3,6 +3,10 @@ body.full-content, body {
     /* background: #f4f6f9; */
     background-image: url('../images/bg.jpg');
     background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     padding-top: 0;
 }
 

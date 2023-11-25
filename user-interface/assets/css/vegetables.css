@@ -62,4 +62,136 @@ footer {
         box-sizing: border-box;
         
         }
-       
+       body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav {
+  float: right;
+}
+
+nav a {
+  margin-right: 10px;
+  color: #000;
+}
+
+main {
+  padding: 20px;
+}
+
+#hero {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+#hero img {
+  width: 100%;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 16px;
+}
+
+#categories {
+  padding: 20px;
+}
+
+#categories h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#categories ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#categories li {
+  margin-bottom: 10px;
+}
+
+#categories a {
+  color: #000;
+}
+
+footer {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 12px;
+  color: #999;
+}
+/* the image*/
+/* the bottom container*/
+.bottom-container {
+  background-color: #060606;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.column {
+  width: 20%;
+}
+
+.column h3 {
+  color: rgb(109, 212, 231); /* Gold color for heading */
+}
+
+/* Style the input and button as needed */
+input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.subscribe-button {
+  /* Your styles for the button */
+  background-color: #4CAF50; /* Green background color */
+  color: white; /* White text color */
+  padding: 10px 15px; /* Padding around the text */
+  font-size: 16px; /* Font size of the text */
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Add some border radius for rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.subscribe-button:hover {
+  background-color: #45a049; /* Darker green color on hover */
+}
+/* css for the icons*/
+.social-container {
+  display: flex;
+  gap: 20px; /* Adjust the spacing between icons */
+}
+
+.social-icon {
+  display: inline-block;
+  font-size: 24px; /* Adjust the font size of the icons */
+  text-decoration: none;
+  color: #333; /* Adjust the color of the icons */
+}
